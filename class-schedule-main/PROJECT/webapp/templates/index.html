@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Scheduler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Class Scheduler</h1>
+        <div class="card timetable-card">
+            <form action="/generate_timetable" method="get">
+                <h2>Generate Timetable</h2>
+                <div class="input-row">
+                    <label>Classes per course per week:</label>
+                    <input type="number" name="classes_per_week" min="1" value="1">
+                </div>
+                <div class="input-row">
+                    <input type="checkbox" name="clear" checked>
+                    <label>Clear existing schedules</label>
+                </div>
+                <button class="btn gradient-btn" type="submit">Generate Timetable</button>
+            </form>
+        </div>
+        <div class="flex-row">
+            <div class="card">
+                <h3 class="card-title">Add Classroom</h3>
+                <form action="/add_classroom" method="post">
+                    <input type="text" name="name" placeholder="Classroom Name" required>
+                    <input type="number" name="capacity" placeholder="Capacity" required>
+                    <button class="btn gradient-btn" type="submit">Add</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Add Class Group</h3>
+                <form action="/add_class" method="post">
+                    <input type="text" name="name" placeholder="Class Group Name" required>
+                    <!-- Course/Teacher selectors can be added here -->
+                    <button class="btn gradient-btn" type="submit">Add</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Add Course</h3>
+                <form action="/add_course" method="post">
+                    <input type="text" name="name" placeholder="Course Name" required>
+                    <button class="btn gradient-btn" type="submit">Add</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Add Teacher</h3>
+                <form action="/add_teacher" method="post">
+                    <input type="text" name="name" placeholder="Teacher Name" required>
+                    <input type="text" name="subject" placeholder="Courses" required>
+                    <button class="btn gradient-btn" type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+        <!-- More sections for scheduling, finding rooms, etc. can be added here -->
+    </div>
+</body>
+</html>
