@@ -12,7 +12,6 @@ A web-based platform for automated class scheduling in higher education institut
 - Find available rooms for extra classes
 - Suggest rescheduling options for classes
 - Data stored in a local SQLite database
-- **Modern dark UI** inspired by BASIC® Culture Manual
 
 ## Tech Stack
 - Python 3
