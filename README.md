@@ -1,3 +1,4 @@
+
 # Class Scheduler Web Application
 
 A web-based platform for automated class scheduling in higher education institutions. It allows authorized users to input classrooms, courses, teachers, and class groups, and generates an optimized, color-coded timetable. Teachers can also find available rooms for extra classes and suggest rescheduling options.
@@ -11,6 +12,8 @@ A web-based platform for automated class scheduling in higher education institut
 - Color-coded, tabular timetable display for each class group
 - Find available rooms for extra classes
 - Suggest rescheduling options for classes
+- Dedicated Teachers Directory page with all teacher details
+- Sidebar button for quick access to the Teachers Directory
 - Data stored in a local SQLite database
 - **Modern GitHub-style dark UI** (deep black, purple accent, crisp layout)
 
@@ -85,7 +88,8 @@ ECE-B
 2. Assign each course in a class group to a teacher.
 3. Click "Generate Timetable" to create the schedule.
 4. View, print, or share the color-coded timetable.
-5. Use the "Find Available Rooms", "Reschedule Class", "Cancel Class", and "Change Room" features as needed.
+5. Use the sidebar to access features like "Find Available Rooms", "Reschedule Class", "Cancel Class", and "Change Room".
+6. Click the "View Teachers Directory" button in the sidebar to see a full list of teachers and their details on a dedicated page.
 
 ## Project Structure
 ```
@@ -93,7 +97,9 @@ PROJECT/
 ├── scheduler.py           # Core scheduling logic and database models
 ├── webapp/
 │   ├── app.py             # Flask web application
-│   ├── templates/         # HTML templates (GitHub dark theme)
+│   ├── templates/
+│   │   ├── teachers.html  # Teachers Directory page
+│   │   └── ...            # Other HTML templates (GitHub dark theme)
 │   └── static/            # CSS and static files (GitHub dark theme)
 ├── scheduler.db           # SQLite database (auto-created)
 └── README.md
