@@ -1,4 +1,4 @@
- Class Scheduler Web Application
+# Class Scheduler Web Application
 
 A web-based platform for automated class scheduling in higher education institutions. It allows authorized users to input classrooms, courses, teachers, and class groups, and generates an optimized, color-coded timetable. Teachers can also find available rooms for extra classes and suggest rescheduling options.
 
